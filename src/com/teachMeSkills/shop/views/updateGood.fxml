@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teachMeSkills.shop.controllers.goodsController.UpdateGoodController">
+    <children>
+        <TextField fx:id="nameGood" focusTraversable="false" layoutX="26.0" layoutY="45.0" prefHeight="31.0" prefWidth="302.0" promptText="Наименование" />
+        <TextField fx:id="descriptionGood" focusTraversable="false" layoutX="26.0" layoutY="97.0" prefHeight="31.0" prefWidth="302.0" promptText="Описание" />
+        <TextField fx:id="priceGood" focusTraversable="false" layoutX="26.0" layoutY="149.0" prefHeight="31.0" prefWidth="128.0" promptText="Цена" />
+        <TextField fx:id="amountGoodsRemaining" focusTraversable="false" layoutX="26.0" layoutY="199.0" prefHeight="31.0" prefWidth="128.0" promptText="В наличии, ед." />
+        <ComboBox fx:id="category" focusTraversable="false" layoutX="25.0" layoutY="246.0" prefHeight="31.0" prefWidth="302.0" />
+        <Button layoutX="128.0" layoutY="308.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="96.0" text="Сохранить" />
+    </children>
+</Pane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teachMeSkills.shop.controllers.usersController.UserController">
+   <children>
+      <TextField fx:id="loginField" focusTraversable="false" layoutX="226.0" layoutY="144.0" promptText="Login">
+         <effect>
+            <Glow />
+         </effect></TextField>
+      <TextField fx:id="passwordField" focusTraversable="false" layoutX="226.0" layoutY="200.0" promptText="Password">
+         <effect>
+            <Glow />
+         </effect>
+      </TextField>
+      <Button fx:id="btn_login" layoutX="279.0" layoutY="244.0" mnemonicParsing="false" onAction="#enterApp" text="Login" />
+      <Hyperlink fx:id="forgotPassword" layoutX="249.0" layoutY="284.0" onAction="#openForgotPasswordForm" text="" />
+      <Label layoutX="263.0" layoutY="59.0" text="SHOP" textFill="#44ab80">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginInfo" layoutX="232.0" layoutY="115.0" textFill="RED" />
+   </children>
+</Pane>

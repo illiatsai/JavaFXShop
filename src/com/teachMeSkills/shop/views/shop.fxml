@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="868.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teachMeSkills.shop.controllers.GeneralController">
+  <tabs>
+    <Tab closable="false" onSelectionChanged="#refreshCategories" text="Категории">
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="856.0">
+               <children>
+                  <TextField fx:id="searchCategoryName" focusTraversable="false" layoutX="24.0" layoutY="39.0" onKeyReleased="#searchByCategoryName" prefHeight="31.0" prefWidth="439.0" promptText="Поиск по названию" />
+                  <TextField fx:id="searchCategoryAmount" focusTraversable="false" layoutX="682.0" layoutY="39.0" onKeyReleased="#searchByCategoryAmount" prefHeight="31.0" prefWidth="152.0" promptText="Поиск по количеству товара" />
+                  <TableView fx:id="categories" layoutX="24.0" layoutY="105.0" prefHeight="405.0" prefWidth="809.0">
+                    <columns>
+                      <TableColumn fx:id="nameCategory" prefWidth="383.0" text="Категория" />
+                        <TableColumn fx:id="amountRemainingForCategory" prefWidth="425.0" text="Количество товаров, ед." />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonAddCategory" layoutX="500.0" layoutY="544.0" mnemonicParsing="false" onAction="#addCategory" text="Добавить" />
+                  <Button fx:id="buttonEditCategory" layoutX="613.0" layoutY="544.0" mnemonicParsing="false" onAction="#editCategory" text="Редактировать" />
+                  <Button fx:id="buttonDeleteCategory" layoutX="758.0" layoutY="544.0" mnemonicParsing="false" onAction="#deleteCategory" text="Удалить" />
+                  <ChoiceBox fx:id="newOperator" layoutX="608.0" layoutY="39.0" onInputMethodTextChanged="#refreshAfterChoice" prefHeight="31.0" prefWidth="66.0" />
+               </children>
+            </Pane>
+         </content></Tab>
+      <Tab closable="false" onSelectionChanged="#refreshGoods" text="Товары">
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="856.0">
+               <children>
+                  <TextField fx:id="searchName" layoutX="24.0" layoutY="39.0" onKeyReleased="#searchByName" prefHeight="31.0" prefWidth="548.0" promptText="Поиск по названию" />
+                  <TextField fx:id="searchPrice" layoutX="630.0" layoutY="39.0" onKeyReleased="#searchByPrice" prefHeight="31.0" prefWidth="204.0" promptText="Поиск по цене" />
+                  <TableView fx:id="goods" layoutX="24.0" layoutY="105.0" prefHeight="405.0" prefWidth="809.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="165.0" text="Название" />
+                      <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="375.0" text="Описание" />
+                        <TableColumn fx:id="priceColumn" prefWidth="136.0" text="Цена" />
+                        <TableColumn fx:id="amountRemaining" prefWidth="132.0" text="В наличии, ед." />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonAdd" layoutX="500.0" layoutY="544.0" mnemonicParsing="false" onAction="#add" text="Добавить" />
+                  <Button fx:id="buttonEdit" layoutX="613.0" layoutY="544.0" mnemonicParsing="false" onAction="#edit" text="Редактировать" />
+                  <Button fx:id="buttonDelete" layoutX="758.0" layoutY="544.0" mnemonicParsing="false" onAction="#delete" text="Удалить" />
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+    <Tab closable="false" text="Продажи">
+      <content>
+          <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="867.0">
+              <children>
+                  <TextField fx:id="searchCustomerName" layoutX="24.0" layoutY="39.0" onKeyReleased="#searchByCustomerName" prefHeight="31.0" prefWidth="343.0" promptText="Поиск ФИО покупателя" />
+                  <TextField fx:id="searchNameSaledGood" layoutX="398.0" layoutY="39.0" onKeyReleased="#searchByNameSaledGood" prefHeight="31.0" prefWidth="284.0" promptText="Поиск названию товара" />
+                  <TextField fx:id="searchPriceSaledGood" layoutX="711.0" layoutY="39.0" onKeyReleased="#searchByPriceSaledGood" prefHeight="31.0" prefWidth="121.0" promptText="Поиск по цене" />
+                  <TableView fx:id="sales" layoutX="24.0" layoutY="105.0" prefHeight="405.0" prefWidth="809.0">
+                      <columns>
+                          <TableColumn fx:id="nameCustomer" prefWidth="142.0" text="ФИО покупателя" />
+                          <TableColumn fx:id="telNumber" prefWidth="151.0" text="Контактный номер" />
+                          <TableColumn fx:id="nameSaledGood" prefWidth="153.0" text="Товар" />
+                          <TableColumn fx:id="amountSaledGood" prefWidth="74.0" text="Кол-во, ед." />
+                          <TableColumn fx:id="resultPrice" prefWidth="151.0" text="Фактическая цена" />
+                          <TableColumn fx:id="dateOfSale" prefWidth="137.0" text="Дата продажи" />
+                      </columns>
+                  </TableView>
+                  <Button fx:id="buttonAddSale" layoutX="735.0" layoutY="544.0" mnemonicParsing="false" onAction="#addSale" text="Добавить" />
+                  <Button fx:id="buttonReport" layoutX="53.0" layoutY="544.0" mnemonicParsing="false" onAction="#makeReport" text="Отчёт" />
+              </children>
+          </Pane>
+      </content>
+  </Tab>
+  </tabs>
+</TabPane>

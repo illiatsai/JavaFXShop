@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teachMeSkills.shop.controllers.categoriesController.UpdateCategoryController">
+    <children>
+        <TextField fx:id="nameCategory" focusTraversable="false" layoutX="28.0" layoutY="155.0" prefHeight="31.0" prefWidth="302.0" promptText="Введите название категории" />
+        <Button layoutX="131.0" layoutY="247.0" mnemonicParsing="false" onAction="#updateCategory" prefHeight="25.0" prefWidth="96.0" text="Сохранить" />
+    </children>
+</Pane>

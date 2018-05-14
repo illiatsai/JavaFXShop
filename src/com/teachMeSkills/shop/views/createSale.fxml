@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.teachMeSkills.shop.controllers.salesController.CreateSalesController">
+    <children>
+        <TextField fx:id="nameCustomer" focusTraversable="false" layoutX="28.0" layoutY="54.0" prefHeight="31.0" prefWidth="302.0" promptText="ФИО покупателя" />
+        <Button layoutX="131.0" layoutY="348.0" mnemonicParsing="false" onAction="#createSale" prefHeight="25.0" prefWidth="96.0" text="Создать" />
+      <TextField fx:id="telNumberCustomer" focusTraversable="false" layoutX="28.0" layoutY="107.0" prefHeight="31.0" prefWidth="302.0" promptText="Телефон покупателя" />
+      <ComboBox fx:id="good" focusTraversable="false" layoutX="28.0" layoutY="159.0" prefHeight="25.0" prefWidth="302.0" promptText="Выберите наименование товара" />
+      <TextField fx:id="amountGoodsSaled" focusTraversable="false" layoutX="28.0" layoutY="207.0" prefHeight="31.0" prefWidth="302.0" promptText="Кол-во проданного товара, ед." />
+      <DatePicker fx:id="dateSale" focusTraversable="false" layoutX="28.0" layoutY="266.0" promptText="Дата продажи" />
+      <Label fx:id="saleInfo" layoutX="26.0" layoutY="315.0" prefHeight="21.0" prefWidth="295.0" textFill="#e80d0d" />
+    </children>
+</Pane>
